@@ -5,17 +5,22 @@ import { AppComponent } from './app.component';
 import {MDBBootstrapModule, MdbCardComponent} from 'angular-bootstrap-md';
 import { WavesModule, CardsFreeModule } from 'angular-bootstrap-md';
 import { NewsComponent } from './news/news.component';
+import { HomeComponent } from './home/home.component';
+import {appRoutes} from './routes';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewsComponent
+    NewsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     CardsFreeModule,
-    WavesModule
+    WavesModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
