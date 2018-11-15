@@ -17,7 +17,7 @@ export class NewsComponent implements OnInit {
 
   ngOnInit() {
   }
-
+//
 
   getPosts() {
     this.posts = this.http.get(this.url + '/news');
