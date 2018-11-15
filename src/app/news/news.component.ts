@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-news',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
 
-  constructor() { }
+  url = '192.168.137.208:3000';
+
+  posts: any;
+  constructor(private http: HttpClient) {
+
+  }
 
   ngOnInit() {
   }
+
+
+  getPosts() {
+    this.posts = this.http.get(this.url + '/news');
+  }
+
 
 }

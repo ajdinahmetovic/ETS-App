@@ -8,19 +8,23 @@ import { NewsComponent } from './news/news.component';
 import { HomeComponent } from './home/home.component';
 import {appRoutes} from './routes';
 import {RouterModule} from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
+import { NavigationComponent } from './navigation/navigation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewsComponent,
-    HomeComponent
+    HomeComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
     MDBBootstrapModule.forRoot(),
     CardsFreeModule,
     WavesModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
