@@ -12,12 +12,10 @@ export class NewsComponent implements OnInit {
 
   posts: any;
   constructor(private http: HttpClient) {
-
   }
 
   ngOnInit() {
   }
-////
 
   getPosts() {
     this.posts = this.http.get(this.url + '/news');

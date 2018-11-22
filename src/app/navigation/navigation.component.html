@@ -1,3 +1,55 @@
-<p>
-  navigation works!
-</p>
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+
+  <mdb-navbar-brand>
+    <a class="navbar-brand" href="#">LOGO</a>
+  </mdb-navbar-brand>
+
+  <links>
+
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link waves-light" mdbWavesEffect>Pocetna<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect>Novosti</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect>O skoli</a>
+      </li>
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          Nastava<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Smjerovi</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Predmeti</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Raspored casova</a>
+
+
+
+          <!--
+          <div class="divider dropdown-divider"></div>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
+          -->
+
+        </div>
+      </li>
+
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          Sekcije<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Novinarska</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Fotografska</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Recitatorska</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Recitatorska</a>
+
+          <!--
+          <div class="divider dropdown-divider"></div>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
+
+       -->
+        </div>
+      </li>
+    </ul>
+  </links>
+</mdb-navbar>

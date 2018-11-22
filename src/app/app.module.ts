@@ -10,13 +10,15 @@ import {appRoutes} from './routes';
 import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { NavigationComponent } from './navigation/navigation.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NewsComponent,
     HomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
