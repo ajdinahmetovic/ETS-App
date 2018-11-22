@@ -8,7 +8,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class NewsComponent implements OnInit {
 
-  url = 'https://192.168.137.208:3000';
+  url = 'https://192.168.17.94:3000';
 
   posts: any;
   constructor(private http: HttpClient) {
@@ -16,7 +16,7 @@ export class NewsComponent implements OnInit {
 
   ngOnInit() {
   }
-
+//
   getPosts() {
     this.posts = this.http.get(this.url + '/news');
     console.log(this.posts);
