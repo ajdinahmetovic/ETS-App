@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {MDBBootstrapModule, MdbCardComponent} from 'angular-bootstrap-md';
+import { CarouselModule, ButtonsModule } from 'angular-bootstrap-md';
 import { WavesModule, CardsFreeModule } from 'angular-bootstrap-md';
 import { NewsComponent } from './news/news.component';
 import { HomeComponent } from './home/home.component';
@@ -11,6 +12,8 @@ import {RouterModule} from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { NavigationComponent } from './navigation/navigation.component';
 import { FooterComponent } from './footer/footer.component';
+import {MatGridListModule} from '@angular/material';
+import { DepartmentsComponent } from './departments/departments.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import { FooterComponent } from './footer/footer.component';
     NewsComponent,
     HomeComponent,
     NavigationComponent,
-    FooterComponent
+    FooterComponent,
+    DepartmentsComponent
   ],
   imports: [
     BrowserModule,
@@ -26,7 +30,11 @@ import { FooterComponent } from './footer/footer.component';
     CardsFreeModule,
     WavesModule,
     RouterModule.forRoot(appRoutes),
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule,
+    CarouselModule,
+    ButtonsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

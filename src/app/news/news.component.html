@@ -1,5 +1,87 @@
-<button (click)="getPosts()">ClickMe</button>
 
-<div *ngFor="let post of posts | async">
-  {{post | json}}
-</div>
+
+<mdb-carousel [isControls]="true" class="carousel slide carousel-fade" [animation]="'fade'">
+
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg" alt="First slide">
+      <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+      <h3 class="h3-responsive">{{news[0].title}}</h3>
+    </div>
+  </mdb-carousel-item>
+
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg" alt="Second slide">
+      <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+      <h3 class="h3-responsive">{{news[1].title}}</h3>
+    </div>
+  </mdb-carousel-item>
+
+  <mdb-carousel-item>
+    <div class="view w-100">
+      <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg" alt="Third slide">
+      <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+    </div>
+    <div class="carousel-caption">
+      <h3 class="h3-responsive">{{news[3].title}}</h3>
+    </div>
+  </mdb-carousel-item>
+</mdb-carousel>
+
+
+
+
+
+<mat-grid-list [cols]="cols" (window:resize)="onResize($event)" >
+  <mat-grid-tile *ngFor="let new of news">
+
+
+        <mdb-card dark="true" style="margin: 15%" >
+
+          <div class="view overlay waves-light" mdbWavesEffect>
+            <mdb-card-img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20%2821%29.jpg"></mdb-card-img>
+            <a>
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+
+          <mdb-card-body class="elegant-color white-text">
+            <a class="activator px-3 mr-2">
+              <i class="fa fa-share-alt white-text"></i>
+            </a>
+
+            <mdb-card-title>
+              <h4>{{new.title}}</h4>
+            </mdb-card-title>
+
+            <hr class="hr-light">
+
+
+            <mdb-card-text class="white-text">
+              {{new.text}}
+            </mdb-card-text>
+
+            <a href="#!" class="white-text d-flex justify-content-end">
+              <h5 class="waves-light white-text" mdbWavesEffect>Vise
+                <span>
+              <i class="fa fa-chevron-right pl-2 waves-light" mdbWavesEffect></i>
+            </span>
+              </h5>
+            </a>
+          </mdb-card-body>
+        </mdb-card>
+
+
+
+
+  </mat-grid-tile>
+
+
+</mat-grid-list>
+
+

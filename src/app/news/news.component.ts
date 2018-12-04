@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
+import {News} from '../data/news';
+import {RestService} from '../services/rest.service';
+import {getNextLNode} from '@angular/core/src/render3/node_manipulation';
+
 
 @Component({
   selector: 'app-news',
@@ -8,19 +13,24 @@ import {HttpClient} from '@angular/common/http';
 })
 export class NewsComponent implements OnInit {
 
-  url = 'https://192.168.17.94:3000';
 
-  posts: any;
-  constructor(private http: HttpClient) {
+  news: News[] = [];
+
+  cols = 4;
+
+  constructor(private rest: RestService) {
+    this.news = this.rest.getNews();
   }
 
   ngOnInit() {
+    this.cols = (window.innerWidth < 500) ? 1 : 4;
   }
-//
-  getPosts() {
-    this.posts = this.http.get(this.url + '/news');
-    console.log(this.posts);
+
+  onResize (event) {
+    this.cols = (window.innerWidth < 500) ? 1 : 4;
   }
+
+
 
 
 }
